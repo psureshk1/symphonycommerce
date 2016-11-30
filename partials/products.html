@@ -1,0 +1,59 @@
+<section id="section-products" class="wrapper full-screen" ng-controller="MainController">
+	<div class="productList-heading">
+		<h1>Product List</h1>
+		<!-- <input type="" name="" ng-model> -->
+		<div class="filters ">
+			<label class="checkbox-inline form-group">
+				<input type="checkbox" value="20" ng-module="filterPrice"  ng-click='setFilterPrice()'">
+				Filter By Price
+
+			</label>
+			<!-- <br> -->
+			<label class="form-group">
+				Sort By
+				<select class="" ng-model="sortingRule">
+					<option value="name">Name</option>
+					<option value="defaultPriceInCents">Price</option>
+					<option value="createdAt">Date</option>
+				</select>
+
+			</label>
+			<h6 ng-if="filterPrice == '20'" > Products whose whose price greater than <strong> $20 </strong> are displayed </h6>
+		</div>
+		<hr>
+	</div>
+	<div class="container-fluid" id="product-content">
+		<div ng-repeat="product in products | orderBy: sortingRule " ng-if="product.defaultPriceInCents/100 > filterPrice"  class="container-fluid" id="productList">
+<!-- filter: {defaultPriceInCents greaterThan('defaultPriceInCents',filterPrice)}  -->
+		<!-- <div id="productList"> -->
+			
+			
+			<div class="p-image">
+				<div class="p-price pull-right ">
+					 <i class="fa fa-usd" aria-hidden="true"></i>{{product.defaultPriceInCents/100}}
+				</div>
+				<img ng-src="{{getProductImage(product.mainImage.ref)}}"/>
+				
+			</div>
+			<div class="p-description">
+				<div class="p-details">
+					<div class="p-heading ">
+						<p class="clearFix">
+							{{product.name}}
+						</p>
+					</div>
+					<div class="p-date">
+						<!-- <h6 class="clearFix"> -->
+							<span>Created At : </span>
+						<!-- </h6> -->
+							<span>{{product.createdAt | date:'medium'}}</span>
+
+					</div>
+				</div>
+				
+			</div>
+		<!-- </div> -->
+		
+		</div>
+	</div>
+</section>

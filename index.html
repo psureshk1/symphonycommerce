@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Symphony commerce code challenge</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+	<script type="text/javascript" src="lib/angular/angular-route.min.js"></script>
+	<script type="text/javascript" src="lib/angular/angular.sanitize.min.js"></script>
+	<script type="text/javascript" src="assets/js/app.js"></script>
+	<script type="text/javascript" src="assets/js/controller.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+
+<body >
+
+
+									<!--*************** NAV BAR ***************-->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class='container-fluid'>
+			<div class="navbar-header">
+			 	<a href="#" class="navbar-brand">
+			 	 <img src="https://lever-client-logos.s3.amazonaws.com/SymphonyCommerce-2015.png" class=>
+			 	</a>
+	           
+	        	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#toggle-bar" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			    </button>
+			</div>
+							<!-- nav bar collapse  -->
+	        <div class="collapse navbar-collapse" id="toggle-bar">
+		      <ul class="nav navbar-nav">
+		        <li >
+		        	<a href="#/home">
+		        		<i class="fa fa-home" aria-hidden="true"></i>
+		        		<span>Home </span>
+		        		<span class="sr-only">
+		        		(current)
+		        		</span>
+		        	</a>
+		        </li>
+		        <li>
+		        	<a href="#/products">
+		       			<i class="fa fa-cart-arrow-down icon"  aria-hidden="true"></i>
+		       	 		<span>Products</span>
+		       		</a>
+		        </li>
+		        
+		      </ul>
+		      
+		      <ul class="nav navbar-nav navbar-right">
+		        <li>
+			        <a id='settings'>
+			        	<i class="fa fa-cogs" aria-hidden="true"></i>
+			        	<span></span>
+			        </a>
+		        </li>
+		      </ul>
+		    </div>
+		    <!-- /.navbar-collapse -->
+		</div>
+    </nav>
+
+    									<!-- END NAV BAR  -->
+    									<!--*************** NG VIEWS ***************-->
+	<div class=" full-screen" id="mainContent">
+		<div class='full-screen' ng-view>
+			
+		</div>
+		
+	</div>
+	<div id="contact" class="creative-button">
+		<h3>Developed By</h3>
+		 		<p>PRAVEEN CHANDER SURESH KUMAR</p>
+                <div id="contact-address">
+                	 <p> 1226 W Adams blvd | #3A</p>
+                	<p> Los Angeles | CA-90007</p>
+                </div>
+               
+                <div id="phone">
+                	<p id="email">
+                  <span class="contact-links">
+
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                    psureshk@usc.edu
+                </p>
+                <p>
+                  <span class="contact-links">
+
+                    <i class="fa fa-mobile"></i>
+                  </span>
+                  (+1)216-533-4802
+                </p>
+                </div>
+                <p>
+                	<a href="http://www.praveenchander.com" target="_blank"> www.praveenchander.com</a>
+                </p>
+	</div>
+
+
+	<script type="text/javascript" src="lib/jquery/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/nav.js"></script>
+
+	<!-- <script type="text/javascript" src="assets/js/index.js"></script> -->
+</body>
+</html>
