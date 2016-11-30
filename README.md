@@ -2,7 +2,7 @@
 
 AWS link
 ---
-[a link] (http://custom-env.ppi7cdaevm.us-west-2.elasticbeanstalk.com/#/home)
+http://custom-env.ppi7cdaevm.us-west-2.elasticbeanstalk.com/#/home
 
 Use [Angular | Ajax | XHR] to complete a successful API call:
 ---
